@@ -1,0 +1,38 @@
+div{
+  display: flex;
+  width: 100%;
+  height: 6vh;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 2%;
+  margin-bottom: 20px;
+  
+
+  input{
+    width: 100%;
+    height: 6vh;
+    font-weight: bolder;
+    background: transparent;
+    color: #ffffff;
+    border: 0;
+    margin-left: 7px;
+
+    &:focus{ 
+         outline-width: 0;}
+  }
+
+  .button{ 
+    border: 0;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff2d04 0%, #c13216 100%);
+    cursor: pointer;
+    color: #ffffff;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    
+  }
+
+}

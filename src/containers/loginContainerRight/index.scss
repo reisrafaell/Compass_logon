@@ -1,0 +1,16 @@
+section{
+    display: flex;   
+    width: 50vw;
+    height: 100vh;    
+    background-image: url("../../assets/login.png");
+    background-position: center;
+    background-size: cover;   
+
+    div {
+        display: flex;        
+        height: 60px;
+        margin-top: 3%;
+        justify-content: center;      
+             
+    }
+}
