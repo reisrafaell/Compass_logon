@@ -1,12 +1,13 @@
 <template>
-    <div>
-         <input autocomplete="off"   :type="type" name="password" required :placeholder=" placeholder" :value="value" class="" >
+    
+         <input autocomplete="off" @click="$emit('continue')"   :type="type"  required :placeholder=" placeholder" :value="value" :class=" setClass" >
         
-    </div>
+  
 </template>
 <script>
 export default {
     name: 'boxInput',
+    emits: 'continue',
        props:{
         type:{
         type:String,
@@ -22,7 +23,7 @@ export default {
                  type: String,
                  default: ''
              },
-             class:{
+             setClass:{
                  type: String
              }
             
