@@ -3,3 +3,19 @@ div {
     align-items: flex-end;
     height: 50px;
 }
+.divMessageErro{
+    display: flex;
+    width: 270px;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+    
+}
+
+.messageErro{
+    font-size: 16px;
+    color: #E9B425;
+    text-align: center;
+}

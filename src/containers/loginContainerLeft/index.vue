@@ -12,10 +12,16 @@
       </div>
       <modelTitle size="font-size:30px" type="h3" text="Login" />
       <div id="containerInput">
-        <boxInput type="text" placeholder="Usuário" setClass="user" v-model="user" />
-        <boxInput type="password" placeholder="Senha" setClass="user" v-model="password" />
-        <div id="messageError"></div>
+        <boxInput type="text" :style="inputErro" placeholder="Usuário" setClass="user"    v-model="user"/>
+        <boxInput type="password" :style="inputErro" placeholder="Senha" setClass="user"  v-model="password"/>
+       <div id="messageError">
+          <modelTitle setClassdiv="divMessageErro" setClass="messageErro"  type="h3" v-show="erroIstLogged"  text="Ops, usuário ou senha inválidos. Tente novamente!" />
+
+       </div>
+     
+       
         <boxInput @continue="login" type="button" value="Continuar" setClass="button"/>
+    
       
       </div>
     </div>
@@ -33,12 +39,19 @@ export default {
   data() {
     return {
       user:'',
-      password:''
+      password:'',
+      erroIstLogged: false,
+      
+      inputErro:'',
+      
     };
   },
   methods: {
-    login() {
-     this.$router.push({name: 'Home'})
+    login() {    
+    if(this.user && this.password === '1'){
+      this.$router.push({name: 'Home'})
+      }else { this.erroIstLogged= true, this.inputErro="border: 1px solid  #E9B425;"}
+     
     },
   },
 };

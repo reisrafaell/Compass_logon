@@ -1,13 +1,15 @@
 <template>
     
-         <input autocomplete="off" @click="$emit('continue')"   :type="type"  required :placeholder=" placeholder" :value="value" :class=" setClass" >
+         <input  autocomplete="off" @click="$emit('continue')"  :type="type" @keyup="$emit('input', $event.target.value)" required :placeholder=" placeholder" :value="value"  :class=" setClass" >
         
   
 </template>
 <script>
 export default {
     name: 'boxInput',
-    emits: 'continue',
+    
+    emits:'continue',
+           
        props:{
         type:{
         type:String,
@@ -25,8 +27,20 @@ export default {
              },
              setClass:{
                  type: String
-             }
+             },
+           
             
+             
+
+         },
+         data(){
+             return{
+                 message:''
+
+             }
+
+         },
+        methods:{
              
 
          }
