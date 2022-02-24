@@ -12,18 +12,14 @@
       </div>
       <modelTitle size="font-size:30px" type="h3" text="Login" />
       <div id="containerInput">
-        <boxInput type="text" :style="inputErro" placeholder="Usuário" setClass="user"    v-model="user"/>
-        <boxInput type="password" :style="inputErro" placeholder="Senha" setClass="user"  v-model="password"/>
+        <boxInput type="text"   :style="inputErro" placeholder="Usuário" setClass="inputUser"    v-model="user"/>
+        <boxInput type="password" :style="inputErro" placeholder="Senha" setClass="inputUser"  v-model="password"/>
        <div id="messageError">
           <modelTitle setClassdiv="divMessageErro" setClass="messageErro"  type="h3" v-show="erroIstLogged"  text="Ops, usuário ou senha inválidos. Tente novamente!" />
 
-       </div>
-     
-       
-        <boxInput @continue="login" type="button" value="Continuar" setClass="button"/>
-    
-      
-      </div>
+       </div>    
+                      <boxInput @continue="login" type="button" value="Continuar" setClass="button"/>
+               </div>
     </div>
   </section>
 </template>
