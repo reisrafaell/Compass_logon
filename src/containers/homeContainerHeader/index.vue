@@ -1,5 +1,8 @@
 <template>
 <div>
+    <div id="logoCompassSmall">
+        <img draggable="false" src="@/assets/LogoCompassBlack.png" alt="logoCompassSmall">
+    </div>
     
 </div>
     
