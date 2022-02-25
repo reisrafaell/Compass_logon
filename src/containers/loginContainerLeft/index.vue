@@ -11,15 +11,14 @@
         />
       </div>
       <modelTitle size="font-size:30px" type="h3" text="Login" />
-      <div id="containerInput">
+      <form @submit.prevent="login" id="containerInput">
         <boxInput type="text"   :style="inputErro" placeholder="Usuário" setClass="inputUser"    v-model="user"/>
         <boxInput type="password" :style="inputErro" placeholder="Senha" setClass="inputUser"  v-model="password"/>
        <div id="messageError">
-          <modelTitle setClassdiv="divMessageErro" setClass="messageErro"  type="h3" v-show="erroIstLogged"  text="Ops, usuário ou senha inválidos. Tente novamente!" />
-
+          <modelTitle setClassdiv="divMessageErro" setClass="messageErro"  type="h3" v-show="erroIsLogged"  text="Ops, usuário ou senha inválidos. Tente novamente!" />
        </div>    
-                      <boxInput @continue="login" type="button" value="Continuar" setClass="button"/>
-               </div>
+         <boxInput type="submit" value="Continuar" setClass="button"/>
+               </form>
     </div>
   </section>
 </template>
@@ -36,8 +35,7 @@ export default {
     return {
       user:'',
       password:'',
-      erroIstLogged: false,
-      
+      erroIsLogged: false,      
       inputErro:'',
       
     };
@@ -46,7 +44,7 @@ export default {
     login() {    
     if(this.user && this.password === '1'){
       this.$router.push({name: 'Home'})
-      }else { this.erroIstLogged= true, this.inputErro="border: 1px solid  #E9B425;"}
+      }else { this.erroIsLogged= true, this.inputErro="border: 1px solid  #E9B425;"}
      
     },
   },

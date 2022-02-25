@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-   
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div >
+  <homeContainerCenter/>
+    <homeContainerFooter/>
+    
   </div>
 </template>
 
 <script>
 
-import HelloWorld from '@/components/HelloWorld.vue'
+import homeContainerCenter from '@/containers/homeContainerCenter';
+import homeContainerFooter from '@/containers/homeContainerFooter';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    homeContainerCenter,
+    homeContainerFooter
+ 
   }
 }
 </script>

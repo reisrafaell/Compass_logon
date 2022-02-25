@@ -5,11 +5,10 @@
       @click="$emit('continue')"
       :type="type"
       @keyup="$emit('input', $event.target.value)"
-      required
       :placeholder="placeholder"
       :value="value"
     />
-    <img v-if="image()" src="../../assets/userIcon.png" alt="iconUser" />
+    <img v-if="image()" src="@/assets/userIcon.png" alt="iconUser" />
     <img v-else src="@/assets/passwordIcon.png" alt="iconInput" />
   </div>
 </template>
@@ -52,9 +51,6 @@ export default {
   },
 };
 </script>
-
-
-
 <style lang="sass" scoped>
 @import './index.scss'
 </style>
