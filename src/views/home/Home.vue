@@ -1,22 +1,29 @@
 <template>
-  <div >
+  <section >
+    <homeContainerHeader/>
   <homeContainerCenter/>
     <homeContainerFooter/>
     
-  </div>
+  </section>
 </template>
 
 <script>
 
 import homeContainerCenter from '@/containers/homeContainerCenter';
 import homeContainerFooter from '@/containers/homeContainerFooter';
+import homeContainerHeader from '@/containers/homeContainerHeader/index.vue'
 
 export default {
   name: 'Home',
   components: {
     homeContainerCenter,
-    homeContainerFooter
+    homeContainerFooter,
+    homeContainerHeader
  
   }
 }
 </script>
+<style lang="sass" scoped>
+@import './index.scss'
+</style>
+

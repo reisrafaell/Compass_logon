@@ -2,6 +2,22 @@ div {
     display: flex;
     align-items: flex-end;
     height: 50px;
+
+    .textHomepageH2{
+        color: #C12D18;
+        font-weight: bold;
+        height: 20px;
+       
+    }
+    .textHomepageH1{
+        color: #C12D18;
+        font-weight: bold;
+        height: 43px;
+
+    }
+    .textHomepageH3{
+        color: #222222;
+    }
 }
 .divMessageErro{
     display: flex;

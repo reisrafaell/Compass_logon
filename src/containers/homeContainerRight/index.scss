@@ -1,0 +1,16 @@
+#center {
+  display: flex;
+  align-items: center; 
+  width: 150%;
+  height: 100%;
+  
+  #textContent{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;  
+    align-items: flex-end;       
+    width: 90%;
+    height: 70%;  
+
+  }
+}
