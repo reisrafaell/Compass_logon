@@ -4,19 +4,21 @@
         <img draggable="false" src="@/assets/LogoCompassBlack.png" alt="logoCompassSmall">
     </div>
     <clock/>
+    <weather/>    
     
-    
-</div>
-    
+</div>    
 </template>
 
 <script >
 import clock from '@/components/clock/index.vue'
+import weather from '../../components/weather/index.vue'
 
 export default {
     name: 'homeContainerHeader',
     components:{
-        clock
+        clock,
+        weather
+
     }
 }
 </script>

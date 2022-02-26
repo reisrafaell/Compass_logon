@@ -2,21 +2,18 @@ div {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 250px;
-    background: rgb(200, 211, 54);
+    height: 18vh;
+    
 
-    #logoCompassSmall{
-        background: rgb(91, 97, 79);
-        width: 250px;
-        height:70px;
-      
-
-        img{
+    #logoCompassSmall {
+        width: 20vw;
+        height: 70px;
+        img {
             padding: 25px 0 0 40px;
             width: 150px;
             height: 42.9px;
-          
-          
+
+
         }
     }
 }
