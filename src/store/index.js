@@ -8,9 +8,8 @@ export default new Vuex.Store({
     iconName:'' ,
   },
   getters:{
-    setIcon(){
-      return this.state.iconName
-    }
+    
+    
   },
   mutations: {
   },

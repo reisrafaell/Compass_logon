@@ -5,7 +5,28 @@
   align-items: center;
   width: 20vw;
   height: 100%;
-  background: rgb(184, 167, 202);
+  
   .hidden {
     display: none}
+    #nameCity{
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    
+      width: 100%;
+      height: 5vh;
+    }
+    #boxIcon{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 140px;
+      height: 65px;
+     
+      img{
+        width: 40px;
+        
+      }
+    }
 }

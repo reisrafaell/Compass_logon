@@ -1,20 +1,29 @@
 <template>
   <div id="weatherCenter">
-    {{ temperatureNumber }}
-    {{ myCity }}
-
+    <div id="nameCity">    
+      <modelTitle setClassdiv="" setClass="" size="font-size: 14px" type="h3" :text=' myCity' />
+    </div>
+    <div id="boxIcon">
     <img
       draggable="false"
       :src="require(`../../assets/icons2/${iconHtml}.png`)"
     />
+      <modelTitle  setClass="temperature" size="font-size: 48px" type="h3" :text='temperatureNumber' />
+    </div>
+   
+
   </div>
 </template>
 <script>
+import modelTitle from "@/components/title/index.vue"
+
 import cityStateName from "../../mixins/cityStateName";
 
 export default {
   name: "weather",
-  components: {},
+  components: {
+    modelTitle
+  },
   data() {
     return {
       temperatureNumber: "",
@@ -43,7 +52,6 @@ export default {
               alert(error.message);
             })
             .then((response) => {
-              //  ./../assets/icons2/01n.png
               let nameIcon = response.weather[0].icon;
               this.$store.state.iconName = nameIcon;
               console.log(this.$store.state.iconName);
