@@ -5,7 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    valueUser:'' ,
+    iconName:'' ,
+  },
+  getters:{
+    setIcon(){
+      return this.state.iconName
+    }
   },
   mutations: {
   },
