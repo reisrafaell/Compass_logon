@@ -2,7 +2,7 @@
   <div :class="setClass">
     <input
       autocomplete="off"
-      @click="$emit('continue')"
+      @click="$emit('buttonClick')"
       :type="type"
       @keyup="$emit('input', $event.target.value)"
       :placeholder="placeholder"
@@ -17,7 +17,7 @@
 export default {
   name: "boxInput",
 
-  emits: "continue",
+  emits: "buttonClick",
 
   props: {
     type: {
