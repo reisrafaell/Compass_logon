@@ -9,14 +9,12 @@
       :src="require(`../../assets/icons2/${iconHtml}.png`)"
     />
       <modelTitle  setClass="temperature" size="font-size: 48px" type="h3" :text='temperatureNumber' />
-    </div>
-   
+    </div>   
 
   </div>
 </template>
 <script>
 import modelTitle from "@/components/title/index.vue"
-
 import cityStateName from "../../mixins/cityStateName";
 
 export default {

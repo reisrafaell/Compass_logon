@@ -1,0 +1,13 @@
+#center{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;   
+    justify-content: center;
+    grid-column: 5;
+    color: #ffffff;
+    p{
+      margin-top: 4px;
+    }
+ 
+}
