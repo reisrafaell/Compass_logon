@@ -1,5 +1,9 @@
 <template>
-  <section>
+  <div id="container">
+    <div id="image">
+    <img src="../../assets/logocompass.png" alt="logoCompass">
+
+    </div>
     <div id="center">
       <div id="text">
         <modelTitle size="font-size: 60px" type="h1" text="Olá," />
@@ -15,12 +19,12 @@
         <boxInput type="text"   :style="inputErro" placeholder="Usuário" setClass="inputUser"    v-model="user"/>
         <boxInput type="password" :style="inputErro" placeholder="Senha" setClass="inputUser"  v-model="password"/>
        <div id="messageError">
-          <modelTitle setClassdiv="divMessageErro" setClass="messageErro"  type="h3" v-show="erroIsLogged"  text="Ops, usuário ou senha inválidos. Tente novamente!" />
+        <modelTitle setClassdiv="divMessageErro" setClass="messageErro"  type="h3" v-show="erroIsLogged"  text="Ops, usuário ou senha inválidos. Tente novamente!" />
        </div>    
          <boxInput type="submit" value="Continuar" setClass="button"/>
                </form>
     </div>
-  </section>
+  </div>
 </template>
 <script>
 import boxInput from "@/components/input/index.vue";
