@@ -4,7 +4,10 @@
         <img draggable="false" src="@/assets/LogoCompassBlack.png" alt="logoCompassSmall">
     </div>
     <clock/>
+    <div id="weather">
+
     <weather/>    
+    </div>
     
 </div>    
 </template>

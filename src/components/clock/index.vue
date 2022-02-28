@@ -1,6 +1,6 @@
 <template>
  <div id="clockCenter">
-      <modelTitle  setClass="clock" size="font-size: 146px" type="h1" :text='actualClock' />
+      <modelTitle  setClass="clock" size="" type="h1" :text='actualClock' />
       <modelTitle setClassdiv="contentClockP" setClass="clockText" size="font-size: 14px" type="h3" :text='dayWeek' />
    
  </div>

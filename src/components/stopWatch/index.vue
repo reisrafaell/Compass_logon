@@ -1,22 +1,15 @@
 <template>
   <div id="center">
-    <modelTitle
-      setClassdiv="textFooterTwee"
-      setClass=""
-      size="font-size: clamp(0.8rem, 2.5vw, 4rem);"
-      type="h3"
-      :text="textContentTwee"
-    />
+    <h1>{{textContentTwee}}</h1>   
     <p>secunds</p>
   </div>
 </template>
 <script>
-import modelTitle from "@/components/title/index.vue";
 
 export default {
   name: "stopwatch",
   components: {
-    modelTitle,
+  
   },
   data() {
     return {

@@ -3,7 +3,7 @@
     <modelTitle
       setClassdiv="textFooter"
       setClass=""
-      size="font-size: clamp(0.8rem, 0.5vw, 1.5rem);"
+     
       type="h3"
       :text="textContent"
     />
