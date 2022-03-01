@@ -13,12 +13,13 @@
     h1{
       display: flex;
       flex-direction: column;
-      font-size: clamp(0.8rem, 2.5vw, 4rem);
+      font-size: clamp(0.8rem, 2.5vw, 3rem);
       align-items: center;    
       justify-content: center;      
       color: #ffffff;
     }
     p{
+      font-size: 12px;
       margin-top: 4px;
     }
  

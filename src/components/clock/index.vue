@@ -1,18 +1,20 @@
 <template>
  <div id="clockCenter">
-      <modelTitle  setClass="clock" size="" type="h1" :text='actualClock' />
-      <modelTitle setClassdiv="contentClockP" setClass="clockText" size="font-size: 14px" type="h3" :text='dayWeek' />
+      <textContent  setClass="clock" size="" type="p" :text='actualClock' />
+      <textContent setClassdiv="contentClockP" setClass="clockText" size="font-size: 14px" type="p" :text='dayWeek' />
    
  </div>
 </template>
 <script>
-import modelTitle from "@/components/title/index.vue"
 import nameDayWeek from '@/mixins/nameDayWeek'
 import nameMonthYear from '@/mixins/nameMouthYear.js'
+import textContent from '../../components/textContent/index'
 export default {
   name: "clock",
   components:{
-    modelTitle
+ 
+    textContent
+
   },
   data() {
     return {  

@@ -1,8 +1,7 @@
 <template>
   <div id="container">
     <div id="image">
-    <img src="../../assets/logocompass.png" alt="logoCompass">
-
+      <img src="../../assets/logocompass.png" alt="logoCompass" />
     </div>
     <div id="center">
       <div id="text">
@@ -16,13 +15,31 @@
       </div>
       <modelTitle size="font-size:30px" type="h3" text="Login" />
       <form @submit.prevent="login" id="containerInput">
-        <boxInput type="text"   :style="inputErro" placeholder="Usuário" setClass="inputUser"    v-model="user"/>
-        <boxInput type="password" :style="inputErro" placeholder="Senha" setClass="inputUser"  v-model="password"/>
-       <div id="messageError">
-        <modelTitle setClassdiv="divMessageErro" setClass="messageErro"  type="h3" v-show="erroIsLogged"  text="Ops, usuário ou senha inválidos. Tente novamente!" />
-       </div>    
-         <boxInput type="submit" value="Continuar" setClass="button"/>
-               </form>
+        <boxInput
+          type="text"
+          :style="inputErro"
+          placeholder="Usuário"
+          setClass="inputUser"
+          v-model="user"
+        />
+        <boxInput
+          type="password"
+          :style="inputErro"
+          placeholder="Senha"
+          setClass="inputUser"
+          v-model="password"
+        />
+        <div id="messageError">
+          <modelTitle
+            setClassdiv="divMessageErro"
+            setClass="messageErro"
+            type="h3"
+            v-show="erroIsLogged"
+            text="Ops, usuário ou senha inválidos. Tente novamente!"
+          />
+        </div>
+        <boxInput type="submit" value="Continuar" setClass="button" />
+      </form>
     </div>
   </div>
 </template>
@@ -37,19 +54,22 @@ export default {
   },
   data() {
     return {
-      user:'',
-      password:'',
-      erroIsLogged: false,      
-      inputErro:'',
-      
+      user: "",
+      password: "",
+      erroIsLogged: false,
+      inputErro: "",
     };
   },
   methods: {
-    login() {    
-    if(this.user && this.password === '1'){
-      this.$router.push({name: 'Home'})
-      }else { this.erroIsLogged= true, this.inputErro="border: 1px solid  #E9B425;"}
-     
+    login() {
+      this.$store.state.users.forEach((event) => {
+        if (this.user === event.user && this.password === event.password) {
+          this.$router.push({ name: "Home" });
+        } else {
+          (this.erroIsLogged = true),
+            (this.inputErro = "border: 1px solid  #E9B425;");
+        }
+      });
     },
   },
 };

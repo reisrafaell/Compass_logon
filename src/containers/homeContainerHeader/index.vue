@@ -5,7 +5,6 @@
     </div>
     <clock/>
     <div id="weather">
-
     <weather/>    
     </div>
     

@@ -61,6 +61,7 @@ div {
   .navegation {
     display: flex;
     grid-column: 7;
+    font-size: clamp(0.8rem, 0.5vw, 1.5rem);
     color: #C13216;
     background: #ffffff;
     justify-content: center;
@@ -77,5 +78,30 @@ div {
       display: flex;
       grid-column: 2;
     }
+  }
+
+  .clock {
+    font-weight: bold;
+    font-size: 146px;
+
+    @media (max-width: 1450px) {
+      font-size: 110px;
+
+    }
+
+    @media (max-width: 1380px) {
+      font-size: 90px;
+
+    }
+  }
+
+  .contentClockP {
+    height: 10px;
+
+    @media (max-width: 1380px) {
+      font-size: 12px;
+
+    }
+
   }
 }
