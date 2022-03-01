@@ -140,7 +140,6 @@ div {
         font-size: 9px;
 
       }
-
     }
   }
 
@@ -149,8 +148,7 @@ div {
     justify-content: center;
     align-items: center;
     background: transparent;
-    text-align: center;
-    display: flex;
+    text-align: center;    
     justify-content: center;
     font-size: clamp(0.5rem, 1vw, 1rem);
     grid-column: 4;
