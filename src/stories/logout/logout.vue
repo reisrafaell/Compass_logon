@@ -1,32 +1,34 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <div :class="setClassdiv"  >
+    <p :style="size" :class="classes" v-if="type === 'p'">
+      {{ text }}
+     
+    </p>  
+   
+  </div>
 </template>
-
 <script>
-import './button.css';
 
 export default {
-  name: 'my-button',
+  name: 'textContent',
 
   props: {
-    label: {
+   type: {
       type: String,
       required: true,
     },
-    primary: {
-      type: Boolean,
-      default: false,
-    },
-    size: {
+    text: {
       type: String,
-      default: 'medium',
-      validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
-      },
+      required: true,
     },
-    backgroundColor: {
+   
+    setClass: {
       type: String,
     },
+    setClassdiv:{
+      type:String,
+      default:""
+    }
   },
 
   computed: {
