@@ -1,9 +1,9 @@
-import input from './input.vue';
+import weather from './weather.vue';
 
 // More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
 export default {
-  title: 'textContent',
-  component: input,
+  title: 'weather',
+  component: weather,
   // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -17,7 +17,7 @@ export default {
 // More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { input },
+  components: { weather },
   template: '<my-button  v-bind="$props" />',
 });
 

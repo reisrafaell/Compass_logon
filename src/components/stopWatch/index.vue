@@ -8,14 +8,10 @@
 
 export default {
   name: "stopwatch",
-  components: {
-  
-  },
+ 
   data() {
     return {
-      actualClock: "",
-      dayWeek: "",
-      textContentTwee: "600",
+     textContentTwee: "600",
     };
   },
   methods: {

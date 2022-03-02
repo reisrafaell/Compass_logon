@@ -14,20 +14,29 @@ const routes = [
     path: '/',
     redirect:'/Login',   
     name: 'Login',
-    component: Login
+    component: Login,
+      meta:{
+      title: 'Login',
+    }
     
   },  
   
   {
     path: '/Login',
     name: 'Login',
-    component: Login
+    component: Login,
+    meta:{
+      title: 'Login',
+    }
     
   },
   {
     path: '/Home',
     name: 'HomePageErro',
     component: Page401,
+    meta:{
+      title: 'Home',
+    }
 
 
   },
@@ -35,6 +44,9 @@ const routes = [
     path: '/Home',
     name: 'Home',
     component: Home,
+     meta:{
+      title: 'Login',
+    }
        
   },
   {
