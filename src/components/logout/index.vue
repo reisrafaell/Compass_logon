@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     click() {
-      this.$router.push({ name: "Login" });
+      this.$router.push('/Login');
     },
   },
 };

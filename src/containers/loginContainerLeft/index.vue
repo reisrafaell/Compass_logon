@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <div id="image">
-      <img src="../../assets/logocompass.png" alt="logoCompass" />
+      <img src="@/assets/logocompass.png" alt="logoCompass" />
     </div>
     <div id="center">
       <div id="text">
@@ -46,6 +46,8 @@
 <script>
 import boxInput from "@/components/input/index.vue";
 import modelTitle from "@/components/title/index.vue";
+import {mapMutations} from 'vuex'
+
 export default {
   name: "LoginContainerLeft",
   components: {
@@ -61,10 +63,13 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(['setLogged']),
     login() {
       this.$store.state.users.forEach((event) => {
         if (this.user === event.user && this.password === event.password) {
+          this.setLogged()
           this.$router.push({ name: "Home" });
+
         } else {
           (this.erroIsLogged = true),
             (this.inputErro = "border: 1px solid  #E9B425;");
@@ -72,6 +77,7 @@ export default {
       });
     },
   },
+
 };
 </script>
 

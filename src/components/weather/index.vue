@@ -6,7 +6,7 @@
     <div id="boxIcon">
     <img
       draggable="false"
-      :src="require(`../../assets/icons2/${iconHtml}.png`)"
+      :src="require(`@/assets/icons2/${iconHtml}.png`)"
     />
       <modelTitle  setClass="temperature" size="font-size: 48px" type="h3" :text='temperatureNumber' />
     </div>   
@@ -15,7 +15,7 @@
 </template>
 <script>
 import modelTitle from "@/components/title/index.vue"
-import cityStateName from "../../mixins/cityStateName";
+import cityStateName from "@/mixins/cityStateName";
 
 export default {
   name: "weather",
@@ -52,7 +52,6 @@ export default {
             .then((response) => {
               let nameIcon = response.weather[0].icon;
               this.$store.state.iconName = nameIcon;
-              console.log(this.$store.state.iconName);
               this.iconHtml = this.$store.state.iconName;
 
               let temperature = `${Math.round(response.main.temp)}°`;

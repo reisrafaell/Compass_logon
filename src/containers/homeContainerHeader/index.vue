@@ -13,7 +13,7 @@
 
 <script >
 import clock from '@/components/clock/index.vue'
-import weather from '../../components/weather/index.vue'
+import weather from '@/components/weather/index.vue'
 
 export default {
     name: 'homeContainerHeader',

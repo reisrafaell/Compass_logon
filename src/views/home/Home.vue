@@ -20,7 +20,11 @@ export default {
     homeContainerFooter,
     homeContainerHeader
  
+  },props:{
+     
   }
+ 
+  
 }
 </script>
 <style lang="sass" scoped>
