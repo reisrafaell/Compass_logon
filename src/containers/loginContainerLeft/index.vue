@@ -67,6 +67,8 @@ export default {
     login() {
       this.$store.state.users.forEach((event) => {
         if (this.user === event.user && this.password === event.password) {
+          localStorage.setItem("user", this.user);
+          localStorage.setItem("password", this.password);
           this.setLogged()
           this.$router.push({ name: "Home" });
 
@@ -76,7 +78,34 @@ export default {
         }
       });
     },
+      redirect() {
+      let initTimer = 5;
+      setInterval(() => {
+        initTimer--;
+        if (initTimer === 0) {
+         this.isLogged()
+        }
+      }, 1000);
+    },
+
+    isLogged(){
+        this.$store.state.users.forEach((event) => {
+        if(localStorage.user === event.user ){
+           this.$router.push({ name: "Home" });
+        }else{
+          return false
+        }
+      });
+    }
+
   },
+ created(){
+   this.redirect()
+     const Title =  document.getElementById('title')
+     Title.innerText= 'Login'
+
+   
+  }
 
 };
 </script>

@@ -19,6 +19,8 @@ export default {
     },
   },
   mounted() {
+     const Title =  document.getElementById('title')
+     Title.innerText= 'Erro-401'
     this.redirect();
   },
 };

@@ -44,6 +44,11 @@ export default {
       navegation: "Continuar Navegando",
     };
   },
+  created(){
+     const Title =  document.getElementById('title')
+     Title.innerText= 'Home'
+
+  }
 };
 </script>
 <style lang="sass" scoped>
