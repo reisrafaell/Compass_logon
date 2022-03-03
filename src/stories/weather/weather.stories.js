@@ -1,46 +1,55 @@
-import weather from './weather.vue';
+// import clock from "./clock.vue";
 
-// More on default export: https://storybook.js.org/docs/vue/writing-stories/introduction#default-export
-export default {
-  title: 'weather',
-  component: weather,
-  // More on argTypes: https://storybook.js.org/docs/vue/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
-  },
-};
+// export default {
+//   title: "clock",
+//   component: clock,
+//   color: { control: "color" },
+//   fontSize: { control: "fontSize" },
+//   backgroundColor: { control: "color" },
 
-// More on component templates: https://storybook.js.org/docs/vue/writing-stories/introduction#using-args
-const Template = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
-  components: { weather },
-  template: '<my-button  v-bind="$props" />',
-});
+//   argTypes: {
+//     hours: {
+//       control: { type: "select" },
+//       options: ["20", "24", "06", "12"],
+//     },
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/vue/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
+//     minutes: {
+//       control: { type: "select" },
+//       options: ["20", "60", "30", "15"],
+//     },
+//     weekDay: {
+//       control: { type: "select" },
+//       options: ["Segunda-Feira", "Terça-Feira", "Domingo"],
+//     },
+//     monthDay: {
+//       control: { type: "select" },
+//       options: ["10", "20", "30"],
+//     },
+//     month: {
+//       control: { type: "select" },
+//       options: ["Janeiro", "Fevereiro", "Dezembro"],
+//     },
+//     years: {
+//       control: { type: "select" },
+//       options: ["2022", "2020", "2019"],
+//     },
+//   },
+// };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+// const Template = (args, { argTypes }) => ({
+//   props: Object.keys(argTypes),
+//   components: { clock },
+//   template: '<clock v-bind="$props" />',
+// });
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
+// export const Primary = Template.bind({});
+// Primary.args = {
+//   primary: true,
+// };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+// // export const secundary = Template.bind({});
+// // secundary.args = {
+// //     apply: 'secundary',
+// //     text: 'Default title',
+// //     type: 'h2',
+// // };
