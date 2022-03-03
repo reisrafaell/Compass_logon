@@ -1,7 +1,11 @@
 <template>
   <section>
-    <div>       
-       <img src="@/assets/logocompass.png" draggable="false" alt="Logo-Compass-white" /> 
+    <div>
+      <img
+        src="@/assets/logocompass.png"
+        draggable="false"
+        alt="Logo-Compass-white"
+      />
     </div>
   </section>
 </template>
@@ -9,12 +13,10 @@
 export default {
   name: "LoginContainerRight",
   data() {
-    return {     
-     
-    };
+    return {};
   },
 };
 </script>
 <style lang="scss" scoped>
-@import "./index.scss"
+@import "./index.scss";
 </style>

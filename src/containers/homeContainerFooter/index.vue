@@ -1,40 +1,30 @@
 <template>
   <div>
-    <textContent
-      setClassdiv="textFooter"         
-      type="p"
-      :text="textContent"
-    />
+    <textContent setClassdiv="textFooter" type="p" :text="textContent" />
 
     <textContent
-      setClassdiv="textFooterTwo"    
+      setClassdiv="textFooterTwo"
       size="font-size: clamp(0.8rem, 0.5vw, 1.5rem);"
       type="p"
       :text="textContentTwo"
     />
     <stopwatch />
-    <textContent
-      setClassdiv="navegation"    
-      type="p"
-      :text="navegation"
-    />
+    <textContent setClassdiv="navegation" type="p" :text="navegation" />
     <buttonLogout />
   </div>
 </template>
 
 <script >
-
 import stopwatch from "@/components/stopWatch/index.vue";
 import buttonLogout from "@/components/logout/index.vue";
-import textContent from "@/components/textContent/index.vue"
+import textContent from "@/components/textContent/index.vue";
 
 export default {
   name: "homeContainerFooter",
   components: {
-  
     stopwatch,
     buttonLogout,
-    textContent
+    textContent,
   },
   data() {
     return {
@@ -44,11 +34,10 @@ export default {
       navegation: "Continuar Navegando",
     };
   },
-  created(){
-     const Title =  document.getElementById('title')
-     Title.innerText= 'Home'
-
-  }
+  created() {
+    const Title = document.getElementById("title");
+    Title.innerText = "Home";
+  },
 };
 </script>
 <style lang="sass" scoped>

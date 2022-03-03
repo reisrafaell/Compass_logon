@@ -1,26 +1,30 @@
 <template>
   <div id="weatherCenter">
-    <div id="nameCity">    
-      <modelTitle setClassdiv="" setClass="" size="font-size: 14px" type="h3" :text=' myCity' />
+    <div id="nameCity">
+      <modelTitle size="font-size: 14px" type="h3" :text="myCity" />
     </div>
     <div id="boxIcon">
-    <img
-      draggable="false"
-      :src="require(`@/assets/icons2/${iconHtml}.png`)"
-    />
-      <modelTitle  setClass="temperature" size="font-size: 48px" type="h3" :text='temperatureNumber' />
-    </div>   
-
+      <img
+        draggable="false"
+        :src="require(`@/assets/icons2/${iconHtml}.png`)"
+      />
+      <modelTitle
+        setClass="temperature"
+        size="font-size: 48px"
+        type="h3"
+        :text="temperatureNumber"
+      />
+    </div>
   </div>
 </template>
 <script>
-import modelTitle from "@/components/title/index.vue"
+import modelTitle from "@/components/title/index.vue";
 import cityStateName from "@/mixins/cityStateName";
 
 export default {
   name: "weather",
   components: {
-    modelTitle
+    modelTitle,
   },
   data() {
     return {
