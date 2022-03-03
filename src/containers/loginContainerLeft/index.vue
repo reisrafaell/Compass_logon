@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <div id="image">
-      <img src="@/assets/logocompass.png" alt="logoCompass" />
+      <img draggable="false" src="@/assets/LogoBranco.png" alt="logoCompass" />
     </div>
     <div id="center">
       <div id="text">
@@ -103,7 +103,8 @@ export default {
    this.redirect()
      const Title =  document.getElementById('title')
      Title.innerText= 'Login'
-
+     this.user = localStorage.getItem("user", this.user);
+         this.password = localStorage.getItem("password", this.password);
    
   }
 

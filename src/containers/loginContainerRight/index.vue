@@ -1,7 +1,7 @@
 <template>
   <section>
     <div>       
-       <img src="@/assets/logocompass.png" draggable="false" alt="Logo-Compass-white" /> 
+       <img id="image" src="@/assets/LogoBranco.png" draggable="false" alt="Logo-Compass-white" /> 
     </div>
   </section>
 </template>
