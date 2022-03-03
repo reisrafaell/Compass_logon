@@ -8,9 +8,9 @@
       :placeholder="placeholder"
       :value="value"
     />
-    <img v-if="image()" src="@/assets/userIcon.png" alt="iconUser" />
-    <img v-else-if="imageInput()" src="@/assets/passwordIcon.png" alt="iconInput" />
-    <img v-else-if="this.type== 'button'"  :style="{display: none}" src="" alt="">
+    <img draggable="false"  v-if="image()" src="@/assets/userIcon.png" alt="iconUser" />
+    <img draggable="false"  v-else-if="imageInput()" src="@/assets/passwordIcon.png" alt="iconInput" />
+    <img  draggable="false" v-else-if="this.type== 'button'"  :style="{display: none}" src="" alt="">
   </div>
 </template>
 <script>

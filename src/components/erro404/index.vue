@@ -1,6 +1,6 @@
 <template>
   <div id="center">
-    <img src="@/assets/Erro-404.jpg" alt="" />
+    <img draggable="false"  src="@/assets/Erro-404.jpg" alt="" />
   </div>
 </template>
 <script>

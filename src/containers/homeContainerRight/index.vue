@@ -15,7 +15,7 @@
     
 </template>
 <script >
-import modelTitle from "../../components/title/index.vue"
+import modelTitle from "@/components/title/index.vue"
 export default {
     name: 'homeContainerRight',
     components:{ 
